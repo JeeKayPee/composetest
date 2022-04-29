@@ -2,13 +2,10 @@ version: "3.9"
 services:
   web:
     build: .
-    # Ports that need to be exposed on the container. These need to be configured in order for Container Canary to perform connectivity tests.
-    ports:
-     - port: 8888
-    # end of ports for Container Canary
-    protocol: TCP
     ports:
       - "8000:5000"
+      - port: 8888
+      - protocol: TCP
     image: "webapp:${TAG}"
 # start of bind point
     volumes:
