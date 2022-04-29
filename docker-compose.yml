@@ -4,7 +4,7 @@ services:
     build: .
     ports:
       - "8000:5000"
-      - port: 8888
+      - "8888:8888"
       - protocol: TCP
     image: "webapp:${TAG}"
 # start of bind point
