@@ -4,6 +4,8 @@ services:
     build: .
     ports:
       - "8000:5000"
+    image: "webapp:${TAG}"
+
 # start of bind point
     volumes:
       - .:/code
