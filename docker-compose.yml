@@ -6,7 +6,7 @@ services:
       - "8000:5000"
       - "8888:8888"
       - protocol: TCP
-    image: "webapp:${TAG}"
+    image: "wordpress:${TAG}"
 # start of bind point
     volumes:
       - .:/code
