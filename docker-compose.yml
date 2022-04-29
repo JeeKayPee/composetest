@@ -4,5 +4,11 @@ services:
     build: .
     ports:
       - "8000:5000"
+# start of bind point
+    volumes:
+      - .:/code
+    environment:
+      FLASK_ENV: development
+# end of bind point
   redis:
     image: "redis:alpine"
